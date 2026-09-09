@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sterling Holland, WR/DB | Willamette High School | Class of 2027</title>
-<meta name="description" content="Sterling Holland, Wide Receiver and Defensive Back at Willamette High School in Eugene, OR, Class of 2027. Two-sport athlete and 1st Team All-League outfielder. NCAA ID# 2606958705.">
-<meta property="og:title" content="Sterling Holland, WR/DB | Willamette High School | Class of 2027">
-<meta property="og:description" content="Sterling Holland, Wide Receiver and Defensive Back at Willamette High School in Eugene, OR, Class of 2027. Two-sport athlete and 1st Team All-League outfielder. NCAA ID# 2606958705.">
+<title>Sterling Holland, WR/OLB | Willamette High School | Class of 2027</title>
+<meta name="description" content="Sterling Holland, Wide Receiver and Outside Linebacker at Willamette High School in Eugene, OR, Class of 2027. 6'3", 200 lbs, 21.0 mph top speed. Two-sport athlete and 1st Team All-League outfielder. NCAA ID# 2606958705.">
+<meta property="og:title" content="Sterling Holland, WR/OLB | Willamette High School | Class of 2027">
+<meta property="og:description" content="Sterling Holland, Wide Receiver and Outside Linebacker at Willamette High School in Eugene, OR, Class of 2027. 6'3", 200 lbs, 21.0 mph top speed. Two-sport athlete and 1st Team All-League outfielder. NCAA ID# 2606958705.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="mediaday.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sterling Holland, WR/DB | Willamette High School | Class of 2027">
-<meta name="twitter:description" content="Sterling Holland, Wide Receiver and Defensive Back at Willamette High School in Eugene, OR, Class of 2027. Two-sport athlete and 1st Team All-League outfielder.">
+<meta name="twitter:title" content="Sterling Holland, WR/OLB | Willamette High School | Class of 2027">
+<meta name="twitter:description" content="Sterling Holland, Wide Receiver and Outside Linebacker at Willamette High School in Eugene, OR, Class of 2027. 6'3", 200 lbs, 21.0 mph top speed. Two-sport athlete and 1st Team All-League outfielder.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQZDCWTCKG"></script>
@@ -22,6 +22,24 @@
   gtag('config', 'G-PQZDCWTCKG');
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- ── 2026 SENIOR SEASON DATA ──────────────────────────────────────────────
+     Single source of truth for the "2026 Senior Season" section.
+     Update this object each week; the markup below fills itself in.
+     Catch rate is computed from receptions / targets, not stored here. -->
+<script>
+  const SEASON_2026 = {
+    receptions:  4,
+    recYards:    45,
+    targets:     6,
+    recTDs:      0,
+    tackles:     6,
+    tfl:         1,
+    sacks:       0,
+    pbu:         0,
+    gamesPlayed: 2,
+    lastUpdated: '2026-09-08'
+  };
+</script>
 <style>
   :root {
     --black: #080808;
@@ -147,6 +165,12 @@
     line-height: 1;
     color: var(--cream);
   }
+  .hstat-unit {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-left: 4px;
+    color: #c9c2b6;
+  }
   .hstat-label {
     font-size: 10px;
     letter-spacing: 2px;
@@ -250,6 +274,21 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #aaa;
+  }
+
+  /* Receiving has 5 cards; below 5 columns the last one fills the row
+     so the grid never shows an empty cell. */
+  @media (max-width: 760px) {
+    .stats-grid-recv > .stat-block:last-child { grid-column: 1 / -1; }
+  }
+
+  .stat-group-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 12px;
   }
 
   /* ── TWO COLUMN ── */
@@ -507,13 +546,14 @@
     <img src="willamette-w.png" alt="Willamette High School Wolverines" style="height:72px;width:auto;display:block;margin-bottom:18px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.55));animation:fadeUp 0.6s 0.05s both;">
     <div class="hero-tag">2027 Recruiting Profile &nbsp;·&nbsp; Willamette HS, Eugene OR</div>
     <h1>Sterling<br><span>Holland</span></h1>
-    <div class="hero-sub">Wide Receiver &nbsp;/&nbsp; Defensive Back &nbsp;·&nbsp; Class of 2027</div>
+    <div class="hero-sub">Wide Receiver &nbsp;/&nbsp; Outside Linebacker &nbsp;·&nbsp; Class of 2027</div>
     <div class="hero-divider"></div>
     <div class="hero-stats">
-      <div class="hstat"><span class="hstat-val">6'2"</span><span class="hstat-label">Height</span></div>
-      <div class="hstat"><span class="hstat-val">195</span><span class="hstat-label">Weight</span></div>
+      <div class="hstat"><span class="hstat-val">6'3"</span><span class="hstat-label">Height</span></div>
+      <div class="hstat"><span class="hstat-val">200</span><span class="hstat-label">Weight</span></div>
       <div class="hstat"><span class="hstat-val">11"</span><span class="hstat-label">Hands</span></div>
-      <div class="hstat"><span class="hstat-val">3.25</span><span class="hstat-label">GPA</span></div>
+      <!-- GPA moved out of the hero row to make space for Top Speed; it still appears in Academics & Background below. -->
+      <div class="hstat"><span class="hstat-val">21.0<span class="hstat-unit">MPH</span></span><span class="hstat-label">Top Speed</span></div>
     </div>
     <div class="hero-sub" style="max-width:560px;animation:fadeUp 0.7s 0.6s forwards both;">I'm entering my senior season at Willamette High School after three years at Crescent Valley. I'm looking forward to competing, earning my spot, and winning alongside my new teammates.</div>
     <div class="hero-cta">
@@ -554,11 +594,94 @@
   </div>
 </section>
 
-<!-- STATS -->
+<!-- 2026 SENIOR SEASON -->
 <section class="stats-section" id="stats">
   <div class="section-inner">
-    <div class="section-label reveal">2025 Junior Season</div>
-    <div class="section-title reveal">By The Numbers</div>
+    <div class="section-label reveal">Current Season</div>
+    <div class="section-title reveal">2026 Senior Season</div>
+
+    <div class="stat-group-label reveal">Receiving</div>
+    <div class="stats-grid stats-grid-recv reveal">
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-receptions">&mdash;</span>
+        <span class="stat-block-label">Receptions</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-recyards">&mdash;</span>
+        <span class="stat-block-label">Rec Yards</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-targets">&mdash;</span>
+        <span class="stat-block-label">Targets</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-catchrate">&mdash;</span>
+        <span class="stat-block-label">Catch Rate</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-rectds">&mdash;</span>
+        <span class="stat-block-label">Rec TDs</span>
+      </div>
+    </div>
+
+    <div class="stat-group-label reveal" style="margin-top:24px;">Defense (OLB)</div>
+    <div class="stats-grid reveal">
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-tackles">&mdash;</span>
+        <span class="stat-block-label">Tackles</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-tfl">&mdash;</span>
+        <span class="stat-block-label">TFL</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-sacks">&mdash;</span>
+        <span class="stat-block-label">Sacks</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-block-val" id="s26-pbu">&mdash;</span>
+        <span class="stat-block-label">Pass Breakups</span>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:12px;font-size:13px;color:#aaa;">Moved to outside linebacker for his senior season at Willamette.</div>
+
+    <div class="reveal" id="s26-meta" style="margin-top:20px;font-size:12px;color:#888;letter-spacing:1px;"></div>
+  </div>
+</section>
+
+<script>
+  // Renders the 2026 section from SEASON_2026 (declared in <head>).
+  (function () {
+    var s = SEASON_2026;
+    var vals = {
+      's26-receptions': s.receptions,
+      's26-recyards':   s.recYards,
+      's26-targets':    s.targets,
+      's26-catchrate':  (s.targets ? Math.round((s.receptions / s.targets) * 100) : 0) + '%',
+      's26-rectds':     s.recTDs,
+      's26-tackles':    s.tackles,
+      's26-tfl':        s.tfl,
+      's26-sacks':      s.sacks,
+      's26-pbu':        s.pbu
+    };
+    for (var id in vals) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = vals[id];
+    }
+    var meta = document.getElementById('s26-meta');
+    if (meta) {
+      var d = new Date(s.lastUpdated + 'T00:00:00');
+      meta.textContent = 'Through ' + s.gamesPlayed + ' game' + (s.gamesPlayed === 1 ? '' : 's') +
+        ' \u00b7 Updated ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+  })();
+</script>
+
+<!-- STATS -->
+<section class="stats-section" id="stats-2025">
+  <div class="section-inner">
+    <div class="section-label reveal">Previous Season</div>
+    <div class="section-title reveal">2025 Junior Season</div>
 
     <div class="stats-grid reveal">
       <div class="stat-block">
@@ -608,10 +731,18 @@
       <div class="info-card reveal">
         <div class="info-card-title">Measurables</div>
         <ul class="info-list">
-          <li><span>Height</span><span>6'2"</span></li>
-          <li><span>Weight</span><span>195 lbs</span></li>
+          <li><span>Height</span><span>6'3"</span></li>
+          <li><span>Weight</span><span>200 lbs</span></li>
           <li><span>Hands</span><span>11"</span></li>
-          <li><span>Position</span><span>WR / DB</span></li>
+          <li style="display:block;">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+              <span style="color:#aaa;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Top Speed</span>
+              <span style="font-weight:600;text-align:right;">21.0 mph</span>
+            </div>
+            <!-- TODO: replace [DEVICE] with the GPS unit, [GAME] with the opponent, and [DATE] with the game date. -->
+            <div style="font-size:11px;color:#888;margin-top:4px;line-height:1.5;">GPS max velocity &middot; [DEVICE] &middot; [GAME], [DATE]</div>
+          </li>
+          <li><span>Position</span><span>WR / OLB</span></li>
           <li><span>#</span><span>7</span></li>
           <li><span>Class</span><span>2027</span></li>
         </ul>
@@ -708,6 +839,7 @@
         <div style="font-size:11px;color:#aaa;margin-top:8px;letter-spacing:1px;">Connor Darby, PrepRedzone Oregon</div>
       </div>
       <a href="https://prepredzone.com/2026/05/2026-x-film-study-8/" target="_blank" class="btn btn-ghost" style="display:inline-flex;font-size:12px;padding:9px 18px;">Read Film Study →</a>
+      <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:14px;">Crescent Valley HS &middot; OSAA 4A &middot; 2025 season film</div>
     </div>
 
     <!-- FEATURED: Sports Illustrated -->
@@ -716,14 +848,15 @@
       <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;margin-bottom:12px;">Oregon's Top 25 Returning Wide Receivers</div>
       <div style="color:#bbb;font-size:14px;line-height:1.75;margin-bottom:16px;">Named among Oregon's top 25 returning wide receivers heading into 2026. SI highlighted his team-high 39 catches, 566 yards, and 9 TDs, along with his All-State Honorable Mention recognition.</div>
       <a href="https://www.si.com/high-school/oregon/revealing-oregon-s-top-returning-wide-receivers-as-explosive-playmakers-are-ready-to-light-up-2026-01kn1fyd0p63" target="_blank" class="btn btn-ghost" style="display:inline-flex;font-size:12px;padding:9px 18px;">Read on SI.com →</a>
+      <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:14px;">Crescent Valley HS &middot; OSAA 4A &middot; 2025 season production</div>
     </div>
 
     <!-- FEATURED: Six Star Football -->
     <div style="background:var(--card);border:1px solid #5599ff;border-radius:8px;padding:24px 28px;margin-bottom:16px;" class="reveal">
       <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5599ff;margin-bottom:8px;">Six Star Football, April 2026</div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;margin-bottom:12px;">Oregon Short List: Prospects Building D1 Buzz &amp; Momentum</div>
-      <div style="color:#bbb;font-size:14px;line-height:1.75;margin-bottom:16px;">Named by Six Star Football on their Oregon prospect board as a player earning increased looks from D1 programs heading into his senior season.</div>
-      <a href="https://sixstarfootball.com" target="_blank" class="btn btn-ghost" style="display:inline-flex;font-size:12px;padding:9px 18px;">Six Star Football →</a>
+      <div style="color:#bbb;font-size:14px;line-height:1.75;">Named by Six Star Football on their Oregon prospect board as a player earning increased looks from D1 programs heading into his senior season.</div>
+      <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:14px;">Crescent Valley HS &middot; OSAA 4A &middot; 2025 season</div>
     </div>
 
     <!-- FEATURED: PrepRedzone Scout Report -->
@@ -735,6 +868,7 @@
         <div style="font-size:11px;color:#aaa;margin-top:8px;letter-spacing:1px;">PrepRedzone Oregon Scout</div>
       </div>
       <a href="https://prepredzone.com/2026/02/ranked-oregon-27s-you-should-know-about/" target="_blank" class="btn btn-ghost" style="display:inline-flex;font-size:12px;padding:9px 18px;">Read Article →</a>
+      <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:14px;">Crescent Valley HS &middot; OSAA 5A (moved up from 4A for 2026) &middot; written February 2026</div>
     </div>
 
     <!-- PrepRedzone Small School Lineup -->
@@ -743,6 +877,7 @@
       <div style="font-weight:600;font-size:16px;margin-bottom:6px;">Oregon's Top Small School Lineup (4A-1A), Named WR</div>
       <div style="color:#bbb;font-size:13px;margin-bottom:12px;">Selected to PrepRedzone's statewide small school offensive lineup alongside players with active D1 offers.</div>
       <a href="https://prepredzone.com/2026/03/oregons-top-small-school-lineup-4a-1a-offense/" target="_blank" style="font-size:12px;color:var(--red);text-decoration:none;letter-spacing:1px;text-transform:uppercase;">Read Article →</a>
+      <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:12px;">Crescent Valley HS &middot; OSAA 4A &middot; 2025 season</div>
     </div>
 
     <!-- Additional mentions -->
@@ -752,6 +887,7 @@
         <div>
           <div class="honor-text">Oregon's Top Performers, Week 4</div>
           <div class="honor-year">PrepRedzone Oregon · October 2025</div>
+          <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:2px;">Crescent Valley HS &middot; OSAA 4A &middot; 2025 season</div>
         </div>
       </div>
       <div class="honor-item">
@@ -759,6 +895,7 @@
         <div>
           <div class="honor-text">Oregon's MVP Elite Program Showcases 2027, 2028, 2029 Stars</div>
           <div class="honor-year">PrepRedzone Oregon · July 2025</div>
+          <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:2px;">Crescent Valley HS &middot; OSAA 4A &middot; 2025 offseason 7v7</div>
         </div>
       </div>
       <div class="honor-item">
@@ -766,6 +903,7 @@
         <div>
           <div class="honor-text">Oregon 2027 Rankings Update, Added to Board</div>
           <div class="honor-year">PrepRedzone Oregon · August 2024</div>
+          <div style="font-size:11px;color:#888;letter-spacing:1px;margin-top:2px;">Crescent Valley HS &middot; OSAA 4A &middot; 2024 season</div>
         </div>
       </div>
     </div>
@@ -774,17 +912,6 @@
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;" class="reveal">
       <a href="https://prepredzone.com/player/sterling-holland/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:13px 20px;background:var(--card);border:1px solid var(--red);border-radius:6px;text-decoration:none;color:var(--white);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;">PrepRedzone Profile →</a>
       <a href="https://www.on3.com/rivals/sterling-holland-287377/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:13px 20px;background:var(--card);border:1px solid #2a7fc9;border-radius:6px;text-decoration:none;color:var(--white);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;">Rivals / On3 Profile →</a>
-      <span style="display:inline-flex;flex-direction:column;gap:4px;">
-        <span style="display:inline-flex;align-items:center;gap:8px;padding:13px 20px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:#666;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:default;opacity:0.5;">247Sports Profile →</span>
-        <span style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#666;text-align:center;">Coming Soon</span>
-      </span>
-    </div>
-
-    <!-- Rankings note -->
-    <div style="margin-top:16px;padding:20px 24px;background:var(--card);border:1px solid var(--border);border-radius:8px;" class="reveal">
-      <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:10px;">National Recruiting Rankings</div>
-      <div style="font-size:15px;font-weight:500;margin-bottom:6px;">Profiles Active, Ratings Pending 2026 Camp Circuit</div>
-      <div style="font-size:13px;color:#aaa;">Sterling has active profiles on 247Sports (coming soon), On3, and Rivals. Composite ratings will be updated following the 2026 spring and summer camp circuit.</div>
     </div>
   </div>
 </section>
@@ -800,7 +927,7 @@
         style="width:80px;height:80px;object-fit:cover;object-position:center top;border-radius:50%;border:3px solid var(--red);flex-shrink:0;">
       <div>
         <div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;letter-spacing:1px;color:#111;">Sterling Holland</div>
-        <div style="font-size:13px;color:#555;">WR / DB &nbsp;·&nbsp; Class of 2027 &nbsp;·&nbsp; Willamette HS (Wolverines)</div>
+        <div style="font-size:13px;color:#555;">WR / OLB &nbsp;·&nbsp; Class of 2027 &nbsp;·&nbsp; Willamette HS (Wolverines)</div>
         <div style="font-size:12px;color:var(--red);font-weight:600;margin-top:4px;">#7 &nbsp;·&nbsp; Eugene, OR</div>
       </div>
     </div>
@@ -825,6 +952,32 @@
         <span class="contact-item-label">Film</span>
         <span class="contact-item-value">hudl.com/v/2T90W1</span>
       </a>
+    </div>
+
+    <!-- PROGRAM CONTACT -->
+    <!-- TODO: replace [COACH NAME], [PHONE] and [EMAIL] with the Willamette HS head football coach's details.
+         Once filled in, make the phone and email tappable by swapping each <div class="contact-item"> for
+         <a href="tel:..."> / <a href="mailto:..."> to match the rows above. -->
+    <div style="margin-top:32px;" class="reveal">
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:12px;">Program Contact</div>
+      <div class="contact-grid">
+        <div class="contact-item" style="cursor:default;">
+          <span class="contact-item-label">Head Coach</span>
+          <span class="contact-item-value">[COACH NAME]</span>
+        </div>
+        <div class="contact-item" style="cursor:default;">
+          <span class="contact-item-label">School</span>
+          <span class="contact-item-value" style="font-size:13px;">Willamette High School, Eugene, OR</span>
+        </div>
+        <div class="contact-item" style="cursor:default;">
+          <span class="contact-item-label">Phone</span>
+          <span class="contact-item-value">[PHONE]</span>
+        </div>
+        <div class="contact-item" style="cursor:default;">
+          <span class="contact-item-label">Email</span>
+          <span class="contact-item-value" style="font-size:13px;">[EMAIL]</span>
+        </div>
+      </div>
     </div>
 
     <!-- NCAA note -->
@@ -1000,7 +1153,7 @@
 </div><!-- end baseball -->
 
 <footer>
-  &copy; 2026 &nbsp;<span>Sterling Holland</span> &nbsp;·&nbsp; Class of 2027 &nbsp;·&nbsp; Willamette HS, Eugene OR &nbsp;·&nbsp; WR / DB
+  &copy; 2026 &nbsp;<span>Sterling Holland</span> &nbsp;·&nbsp; Class of 2027 &nbsp;·&nbsp; Willamette HS, Eugene OR &nbsp;·&nbsp; WR / OLB
 </footer>
 
 <script>
