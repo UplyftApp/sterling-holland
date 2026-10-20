@@ -36,12 +36,11 @@
     recYards:    126,
     longRec:     29,
     recTDs:      3,
-    // Defense is team-tracked; MaxPreps' defensive tab has not been
-    // checked past Week 5, so these are the Week 5 figures.
-    tackles:     13,
-    tfl:         1,
-    sacks:       0,
-    pbu:         0,
+    tackles:       10,   // 3 solo + 7 assisted
+    tfl:           1,
+    interceptions: 1,
+    intYards:      22,
+    pbu:           2,    // "PD" on the MaxPreps defensive table
     gamesPlayed: 7,
     lastUpdated: '2026-10-19'
   };
@@ -630,8 +629,6 @@
       </div>
     </div>
 
-    <div class="reveal" style="margin-top:10px;font-size:12px;color:#888;letter-spacing:1px;">Receiving totals per <a href="https://www.maxpreps.com/or/eugene/willamette-wolverines/football/stats/" target="_blank" style="color:#aaa;">MaxPreps</a>.</div>
-
     <div class="stat-group-label reveal" style="margin-top:24px;">Defense (OLB)</div>
     <div class="stats-grid reveal">
       <div class="stat-block">
@@ -643,8 +640,8 @@
         <span class="stat-block-label">TFL</span>
       </div>
       <div class="stat-block">
-        <span class="stat-block-val" id="s26-sacks">&mdash;</span>
-        <span class="stat-block-label">Sacks</span>
+        <span class="stat-block-val" id="s26-int">&mdash;</span>
+        <span class="stat-block-label">Interceptions</span>
       </div>
       <div class="stat-block">
         <span class="stat-block-val" id="s26-pbu">&mdash;</span>
@@ -652,9 +649,10 @@
       </div>
     </div>
     <div class="reveal" style="margin-top:12px;font-size:13px;color:#aaa;">Moved to outside linebacker for his senior season at Willamette.</div>
-    <div class="reveal" style="margin-top:6px;font-size:13px;color:#aaa;">Special teams: recovered an onside kick vs. Jesuit.</div>
+    <div class="reveal" style="margin-top:6px;font-size:13px;color:#aaa;">Interception returned 22 yards. Special teams: recovered an onside kick vs. Jesuit.</div>
 
     <div class="reveal" id="s26-meta" style="margin-top:20px;font-size:12px;color:#888;letter-spacing:1px;"></div>
+    <div class="reveal" style="margin-top:4px;font-size:12px;color:#888;letter-spacing:1px;">Season stats per <a href="https://www.maxpreps.com/or/eugene/willamette-wolverines/football/stats/" target="_blank" style="color:#aaa;">MaxPreps</a>.</div>
   </div>
 </section>
 
@@ -670,7 +668,7 @@
       's26-rectds':     s.recTDs,
       's26-tackles':    s.tackles,
       's26-tfl':        s.tfl,
-      's26-sacks':      s.sacks,
+      's26-int':        s.interceptions,
       's26-pbu':        s.pbu
     };
     for (var id in vals) {
