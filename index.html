@@ -28,16 +28,22 @@
      Catch rate is computed from receptions / targets, not stored here. -->
 <script>
   const SEASON_2026 = {
-    receptions:  13,
-    recYards:    165,
-    targets:     20,
+    // Receiving mirrors the MaxPreps team stats page so this site and the
+    // public record a coach checks agree. Yards/catch is computed from
+    // recYards / receptions, so only the raw numbers need touching.
+    // https://www.maxpreps.com/or/eugene/willamette-wolverines/football/stats/
+    receptions:  12,
+    recYards:    126,
+    longRec:     29,
     recTDs:      3,
+    // Defense is team-tracked; MaxPreps' defensive tab has not been
+    // checked past Week 5, so these are the Week 5 figures.
     tackles:     13,
     tfl:         1,
     sacks:       0,
     pbu:         0,
-    gamesPlayed: 5,
-    lastUpdated: '2026-10-05'
+    gamesPlayed: 7,
+    lastUpdated: '2026-10-19'
   };
 </script>
 <style>
@@ -611,18 +617,20 @@
         <span class="stat-block-label">Rec Yards</span>
       </div>
       <div class="stat-block">
-        <span class="stat-block-val" id="s26-targets">&mdash;</span>
-        <span class="stat-block-label">Targets</span>
+        <span class="stat-block-val" id="s26-avg">&mdash;</span>
+        <span class="stat-block-label">Yds / Catch</span>
       </div>
       <div class="stat-block">
-        <span class="stat-block-val" id="s26-catchrate">&mdash;</span>
-        <span class="stat-block-label">Catch Rate</span>
+        <span class="stat-block-val" id="s26-long">&mdash;</span>
+        <span class="stat-block-label">Long</span>
       </div>
       <div class="stat-block">
         <span class="stat-block-val" id="s26-rectds">&mdash;</span>
         <span class="stat-block-label">Rec TDs</span>
       </div>
     </div>
+
+    <div class="reveal" style="margin-top:10px;font-size:12px;color:#888;letter-spacing:1px;">Receiving totals per <a href="https://www.maxpreps.com/or/eugene/willamette-wolverines/football/stats/" target="_blank" style="color:#aaa;">MaxPreps</a>.</div>
 
     <div class="stat-group-label reveal" style="margin-top:24px;">Defense (OLB)</div>
     <div class="stats-grid reveal">
@@ -657,8 +665,8 @@
     var vals = {
       's26-receptions': s.receptions,
       's26-recyards':   s.recYards,
-      's26-targets':    s.targets,
-      's26-catchrate':  (s.targets ? Math.round((s.receptions / s.targets) * 100) : 0) + '%',
+      's26-avg':        s.receptions ? (s.recYards / s.receptions).toFixed(1) : '0.0',
+      's26-long':       s.longRec,
       's26-rectds':     s.recTDs,
       's26-tackles':    s.tackles,
       's26-tfl':        s.tfl,
@@ -978,19 +986,16 @@
         </div>
         <div class="contact-item" style="cursor:default;">
           <span class="contact-item-label">School</span>
-          <span class="contact-item-value" style="font-size:13px;">Willamette High School, Eugene, OR</span>
+          <span class="contact-item-value" style="font-size:13px;">Willamette High School<br>1801 Echo Hollow Rd, Eugene, OR 97402</span>
         </div>
+        <a href="tel:5416890731" class="contact-item">
+          <span class="contact-item-label">Phone</span>
+          <span class="contact-item-value">541-689-0731</span>
+        </a>
         <a href="mailto:josh.line@bethel.k12.or.us" class="contact-item">
           <span class="contact-item-label">Email</span>
           <span class="contact-item-value" style="font-size:13px;">josh.line@bethel.k12.or.us</span>
         </a>
-        <!-- TODO: no office number yet. When you have it, drop this row back in
-             next to the email so the grid reads Coach / School / Phone / Email:
-        <a href="tel:5415551234" class="contact-item">
-          <span class="contact-item-label">Phone</span>
-          <span class="contact-item-value">541-555-1234</span>
-        </a>
-        -->
       </div>
     </div>
 
